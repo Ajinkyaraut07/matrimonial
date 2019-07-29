@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ajinkyawok</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Marital Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="./assets/js/jquery.min.js"></script>
+<link href="./assets/css/style.css" rel='stylesheet' type='text/css' />
+<link href='//fonts.googleapis.com/css?family=Oswald:300,400,700' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
+<!----font-Awesome----->
+<link href="./assets/css/font-awesome.css" rel="stylesheet"> 
+<!----font-Awesome----->
+<script>
+$(document).ready(function(){
+    $(".dropdown").hover(            
+        function() {
+            $('.dropdown-menu', this).stop( true, true ).slideDown("fast");
+            $(this).toggleClass('open');        
+        },
+        function() {
+            $('.dropdown-menu', this).stop( true, true ).slideUp("fast");
+            $(this).toggleClass('open');       
+        }
+    );
+    });
+
+
+
+    function change_for(gen) {
+        if (gen == 1) {
+            jQuery("#rblGender_1_for").attr('checked', true);
+        } else {
+            jQuery("#rblGender_0_for").attr('checked', true);
+        }
+
+    }
+    function change_gen(gen) {
+        if (gen == 1) {
+            jQuery("#rblGender_1").attr('checked', true);
+        } else {
+            jQuery("#rblGender_0").attr('checked', true);
+        }
+
+    }
+</script>
+
+</head>
+<body  style="background-image:url(./assets/images/swa1.jpg);background-repeat:no-repeat;background-size:cover; background-position:center"> 
+  <app-root></app-root>
+</body>
+</html>
