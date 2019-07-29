@@ -1,0 +1,101 @@
+
+<div class="navbar navbar-inverse-blue navbar navbar-fixed-top">
+  <!--<div class="navbar navbar-inverse-blue navbar-fixed-top">-->
+  <div class="navbar-inner navbar-inner_1">
+      <div class="container">
+          <div class="navigation">
+              <nav id="colorNav">
+
+              </nav>
+          </div>
+
+          <a class="brand" href=""><img src="./assets/images/logo.png" alt="logo"> </a>
+         
+          <div class="pull-right">
+              <nav class="navbar nav_bottom" role="navigation">
+
+                  <!-- Brand and toggle get grouped for better mobile display -->
+                  <div class="navbar-header nav_2">
+                      <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
+                          Menu
+                          <span class="sr-only">Toggle navigation</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand" href="#"></a>
+                  </div>
+                  <!-- Collect the nav links, forms, and other content for toggling -->
+                  <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+                      <ul class="nav navbar-nav nav_1">
+                          <li><h5>Already Registered User?</h5></li>
+                          <li> <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                             Login
+                                  </button>
+                          </li>
+                          <li><button type="button" class="btn btn-danger">
+                              <a routerLink="/signup" routerLinkActive="active">  Signup</a>
+                            </button>
+                            </li>
+
+                      </ul>
+                  </div><!-- /.navbar-collapse -->
+              </nav>
+
+              
+
+
+          </div> <!-- end pull-right -->
+          <div class="clearfix"> </div>
+      </div> <!-- end container -->
+  </div> <!-- end navbar-inner -->
+</div> <!-- end navbar-inverse-blue -->
+<p class="help-block"></p>
+
+<form #lform="ngForm">
+    <div style="height: 70px"></div>
+    <p class="help-block"></p>
+    <p class="help-block "></p>
+    <div class="container" >
+            
+            <div class="col-md-8 mobile_hide row-md-10 mobile_hide"></div>
+        <div class="modal" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                        <p class="help-block"></p>
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4><p style="position:center">Login</p></h4>
+                        
+                    </div>
+  
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="control-group form-group">
+                            <div class="controls">
+                                <label>User name:</label>
+                                <input class="form-control" autocomplete="off" name="username" #username="ngModel" [(ngModel)]="reg.username" maxlength="50" type="text" id="txtEmailAddress" required="" data-validation-required-message="Please enter a usrname." placeholder="Username">
+                                <p class="help-block"></p>
+                            </div>
+                        </div>
+                        <div class="control-group form-group">
+                            <div class="controls">
+                                <label>Password:</label>
+                                <input maxlength="16" class="form-control" name="user_passward"  name="user_passward" [(ngModel)]="reg.user_passward" type="password" id="txtPassword" required="" data-validation-required-message="Please enter a password." placeholder="Password">
+                                <p class="help-block"></p>
+                            </div>
+                        </div>
+                    </div>
+  
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                            <input type="hidden" name="action" value="Login">
+                        <button type="button" class="btn btn-danger" (click)="loginCheckMethod($event,lform)">Login</button>
+                    </div>
+  
+                </div>
+            </div>
+        </div>
+  
+    </div>
+   </form>
